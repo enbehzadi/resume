@@ -1,0 +1,41 @@
+{
+  "appTitle": "Resume Mojtaba Behzadi",
+  "aboutMe": "About Me",
+  "aboutMeDetaile": "\t•\tDeveloper with eight years of experience in mobile and web development\n\t•\tExpertise in Flutter, Java, Kotlin, Swift, Go (Golang), Laravel, and React\n\t•\tCreated cross-platform and native apps for Android and iOS\n\t•\tExperience in commercial, financial, social networking, and full-stack projects\n\t•\tWorked with backend (Go, Laravel) and frontend (React) technologies\n\t•\tPassionate about solving complex problems and exploring new technologies\n\t•\tFocused on delivering high-quality solutions that meet client and user needs",
+  "experience": "Experience",
+
+  "experience_item1_title": "Cheetapost (Golrang System) - 2021-2024 - Senior Flutter Developer and Team Leader",
+  "experience_item1_detaile": "Responsible for developing and maintaining cross-platform mobile apps, '\n 'implementing native features, leading and mentoring teams, '\n'and optimizing performance and releases across iOS and Android platforms.",
+
+  "experience_item2_title": "Exir Rayane Saba - 2017-2021- Mid-level Flutter Developer and Java/Kotlin Developer",
+  "experience_item2_detaile": "'Responsible for developing and maintaining cross-platform mobile apps, '\n                'implementing native features, leading and mentoring teams, '\n                'and optimizing performance and releases across iOS and Android platforms.",
+
+  "experience_item3_title": "Greenweb - 2016-2017 -' 'Android Developer",
+  "experience_item3_detaile": "Responsible for developing and maintaining Android apps, ensuring optimal performance and functionality.",
+
+  "experience_item4_title": "'Narmgostaran - 2016-2017'\n Android Developer'",
+  "experience_item4_detaile": "'Responsible for developing and maintaining Android apps, ensuring optimal performance and functionality.",
+
+  "project1_title": "cheetapost",
+  "project1_detaile": "privat post",
+
+  "project2_title": "arkacoin",
+  "project2_detaile": "Crypto Currency",
+
+  "project3_title": "shop saragsm",
+  "project3_detaile": "shop",
+
+  "skills": "Skills",
+  "education": "Education",
+  "education_item1": "Bachelor's degree in Software Engineering from Sajad University of Mashhad.",
+  "education_item2": "Associate’s degree in in Software Engineering from Montazeri University of Mashhad. ",
+  "projects": "Projects",
+  "contact": "Contact Me",
+  "selectLanguage": "Select Language",
+  "projectLink": "Project Link",
+
+  "skill1": "Expert in mobile languages: Flutter, Kotlin, Java, and Swift.",
+  "skill2": " Backend:junior backend developer  with Golang and Laravel.",
+  "skill3": "Frontend: junior backend developer  with React and Next.",
+  "skill4": "Clean Architectural Patterns: Strong grasp of MVVM, BLoC, and Clean Architecture."
+}
