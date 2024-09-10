@@ -11,7 +11,7 @@
   <!-- PWA manifest -->
   <link rel="manifest" href="manifest.json">
 
-  <!-- لودینگ استایل جدید -->
+  <!-- لودینگ استایل جدید و جذاب -->
   <style>
     /* سبک برای لودینگ جدید */
     #loading {
@@ -28,21 +28,43 @@
       display: inline-block;
       width: 80px;
       height: 80px;
-      border: 3px solid rgba(255, 255, 255, 0.3);
+      border: 6px solid rgba(255, 255, 255, 0.3);
       border-radius: 50%;
-      border-top-color: #007AFF;
-      animation: spin 1s ease-in-out infinite;
+      border-top-color: #ff5733;
+      animation: spin 1.5s ease-in-out infinite, pulse 1.5s ease-in-out infinite alternate;
     }
+
     @keyframes spin {
       to {
         transform: rotate(360deg);
       }
     }
+
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 0px rgba(255, 87, 51, 0.7);
+      }
+      100% {
+        box-shadow: 0 0 25px rgba(255, 87, 51, 0.7);
+      }
+    }
+
     .loader-text {
       margin-top: 20px;
-      font-family: Arial, sans-serif;
-      color: #007AFF;
+      font-family: 'Arial', sans-serif;
+      color: #ff5733;
       font-size: 18px;
+      text-transform: uppercase;
+      animation: textGlow 1.5s ease-in-out infinite alternate;
+    }
+
+    @keyframes textGlow {
+      0% {
+        text-shadow: 0 0 5px rgba(255, 87, 51, 0.5);
+      }
+      100% {
+        text-shadow: 0 0 20px rgba(255, 87, 51, 1);
+      }
     }
   </style>
 </head>
