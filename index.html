@@ -11,14 +11,14 @@
   <!-- PWA manifest -->
   <link rel="manifest" href="manifest.json">
 
-  <!-- لودینگ استایل جدید و جذاب -->
+  <!-- لودینگ استایل جدید و پیچیده -->
   <style>
-    /* سبک برای لودینگ جدید */
+    /* سبک برای لودینگ */
     #loading {
       position: fixed;
       width: 100%;
       height: 100%;
-      background-color: #f0f0f0;
+      background-color: #e0f7fa;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -27,50 +27,71 @@
     }
     .loader {
       display: inline-block;
-      width: 80px;
-      height: 80px;
+      width: 100px;
+      height: 100px;
       border: 6px solid rgba(255, 255, 255, 0.3);
       border-radius: 50%;
-      border-top-color: #ff5733;
-      animation: spin 1.5s ease-in-out infinite, pulse 1.5s ease-in-out infinite alternate;
+      border-top-color: #007AFF;
+      animation: spin 1.5s ease-in-out infinite, colorChange 2s ease-in-out infinite;
     }
 
+    /* انیمیشن چرخش */
     @keyframes spin {
       to {
         transform: rotate(360deg);
       }
     }
 
-    @keyframes pulse {
+    /* انیمیشن تغییر رنگ */
+    @keyframes colorChange {
       0% {
-        box-shadow: 0 0 0px rgba(255, 87, 51, 0.7);
+        border-top-color: #007AFF;
+      }
+      50% {
+        border-top-color: #00CFFF;
       }
       100% {
-        box-shadow: 0 0 25px rgba(255, 87, 51, 0.7);
+        border-top-color: #007AFF;
       }
     }
 
+    /* انیمیشن برای متن */
     .loader-text {
       margin-top: 20px;
       font-family: 'Arial', sans-serif;
-      color: #ff5733;
+      color: #007AFF;
       font-size: 18px;
       text-transform: uppercase;
-      animation: textGlow 1.5s ease-in-out infinite alternate;
+      animation: textGlow 2s ease-in-out infinite, textMove 3s ease-in-out infinite alternate;
     }
 
+    /* افکت درخشش متن */
     @keyframes textGlow {
       0% {
-        text-shadow: 0 0 5px rgba(255, 87, 51, 0.5);
+        text-shadow: 0 0 5px rgba(0, 122, 255, 0.5);
       }
       100% {
-        text-shadow: 0 0 20px rgba(255, 87, 51, 1);
+        text-shadow: 0 0 20px rgba(0, 122, 255, 1);
+      }
+    }
+
+    /* حرکت نرم متن */
+    @keyframes textMove {
+      0% {
+        transform: translateY(0px);
+      }
+      100% {
+        transform: translateY(-10px);
       }
     }
   </style>
 </head>
 <body>
-
+<!-- نمایش لودینگ -->
+<div id="loading">
+  <div class="loader"></div>
+  <div class="loader-text">loading...</div>
+</div>
 
 <!-- اپلیکیشن فلاتر -->
 <script src="main.dart.js" type="application/javascript"></script>
