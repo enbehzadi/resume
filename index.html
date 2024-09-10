@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <base href="https://enbehzadi.github.io/resume/">
   <meta charset="UTF-8">
@@ -11,77 +11,86 @@
   <!-- PWA manifest -->
   <link rel="manifest" href="manifest.json">
 
-  <!-- استایل لودینگ گیمی -->
+  <!-- لودینگ استایل جدید و پیچیده -->
   <style>
-    body, html {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: #0a0a23;
-      font-family: 'Arial', sans-serif;
-    }
-
+    /* سبک برای لودینگ */
     #loading {
-      position: relative;
-      width: 200px;
-      height: 200px;
-    }
-
-    .circle {
+      position: fixed;
       width: 100%;
       height: 100%;
+      background-color: #e0f7fa;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+    .loader {
+      display: inline-block;
+      width: 100px;
+      height: 100px;
+      border: 6px solid rgba(255, 255, 255, 0.3);
       border-radius: 50%;
-      border: 6px solid transparent;
       border-top-color: #007AFF;
-      border-bottom-color: #007AFF;
-      animation: spin 1.5s linear infinite;
+      animation: spin 1.5s ease-in-out infinite, colorChange 2s ease-in-out infinite;
     }
 
+    /* انیمیشن چرخش */
     @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
+      to {
+        transform: rotate(360deg);
+      }
     }
 
-    .circle:before {
-      content: '';
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      bottom: 10px;
-      left: 10px;
-      border-radius: 50%;
-      border: 6px solid transparent;
-      border-left-color: #fff;
-      animation: spin 2s linear reverse infinite;
+    /* انیمیشن تغییر رنگ */
+    @keyframes colorChange {
+      0% {
+        border-top-color: #007AFF;
+      }
+      50% {
+        border-top-color: #00CFFF;
+      }
+      100% {
+        border-top-color: #007AFF;
+      }
     }
 
+    /* انیمیشن برای متن */
     .loader-text {
-      position: absolute;
-      bottom: -50px;
-      left: 50%;
-      transform: translateX(-50%);
+      margin-top: 20px;
+      font-family: 'Arial', sans-serif;
       color: #007AFF;
-      font-size: 20px;
-      letter-spacing: 2px;
+      font-size: 18px;
       text-transform: uppercase;
-      animation: fadeIn 1s ease-in-out infinite alternate;
+      animation: textGlow 2s ease-in-out infinite, textMove 3s ease-in-out infinite alternate;
     }
 
-    @keyframes fadeIn {
-      0% { opacity: 0.3; }
-      100% { opacity: 1; }
+    /* افکت درخشش متن */
+    @keyframes textGlow {
+      0% {
+        text-shadow: 0 0 5px rgba(0, 122, 255, 0.5);
+      }
+      100% {
+        text-shadow: 0 0 20px rgba(0, 122, 255, 1);
+      }
+    }
+
+    /* حرکت نرم متن */
+    @keyframes textMove {
+      0% {
+        transform: translateY(0px);
+      }
+      100% {
+        transform: translateY(-10px);
+      }
     }
   </style>
 </head>
 <body>
-
 <!-- نمایش لودینگ -->
 <div id="loading">
-  <div class="circle"></div>
-  <div class="loader-text">Loading...</div>
+  <div class="loader"></div>
+  <div class="loader-text">loading...</div>
 </div>
 
 <!-- اپلیکیشن فلاتر -->
@@ -93,6 +102,5 @@
     document.getElementById('loading').style.display = 'none';
   });
 </script>
-
 </body>
 </html>
